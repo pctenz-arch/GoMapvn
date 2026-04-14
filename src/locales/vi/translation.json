@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "map": "Bản đồ",
+    "sos": "Khẩn cấp",
+    "chat": "Hỏi AI",
+    "profile": "Hồ sơ"
+  },
+  "home": {
+    "welcome": "Chào buổi sáng",
+    "search_placeholder": "Tìm kiếm bài viết, hướng dẫn...",
+    "quick_actions": "Hành động nhanh",
+    "fake_call": "Gọi giả",
+    "record": "Ghi âm",
+    "share_location": "Chia sẻ vị trí",
+    "community": "Cộng đồng",
+    "post_placeholder": "Bạn đang nghĩ gì?",
+    "post_button": "Đăng"
+  },
+  "profile": {
+    "title": "Hồ sơ",
+    "edit_profile": "Chỉnh sửa hồ sơ",
+    "language": "Ngôn ngữ",
+    "vietnamese": "Tiếng Việt",
+    "english": "English",
+    "logout": "Đăng xuất",
+    "stats": {
+      "posts": "Bài viết",
+      "friends": "Bạn bè",
+      "saved": "Đã lưu"
+    }
+  },
+  "sos": {
+    "title": "Khẩn cấp",
+    "sos_button": "SOS",
+    "sos_desc": "Nhấn để gửi vị trí và cảnh báo đến người thân",
+    "fake_call": "Gọi giả",
+    "fake_call_desc": "Tạo cuộc gọi đến giả để thoát khỏi tình huống khó xử",
+    "emergency_contacts": "Danh bạ khẩn cấp",
+    "police": "Cảnh sát (113)",
+    "ambulance": "Cấp cứu (115)"
+  },
+  "chat": {
+    "title": "Trợ Lý GoMap",
+    "active": "Đang hoạt động",
+    "placeholder": "Hỏi AI",
+    "welcome_msg": "Chào bạn, tôi là trợ lý ảo của GoMap. Tôi ở đây để lắng nghe, chia sẻ và tư vấn cho bạn về các vấn đề tâm lý, an toàn cá nhân. Bạn đang gặp chuyện gì khó khăn sao?",
+    "history": "Lịch sử trò chuyện",
+    "new_chat_button": "Trò chuyện mới",
+    "new_chat_title": "Cuộc trò chuyện mới"
+  },
+  "map": {
+    "search_placeholder": "Tìm kiếm địa điểm an toàn...",
+    "add_place": "Thêm địa điểm",
+    "my_location": "Vị trí của tôi"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "GoMap",
+  "short_name": "GoMap",
+  "description": "Cộng đồng an toàn và bảo vệ lẫn nhau.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#007AFF",
+  "icons": [
+    {
+      "src": "https://picsum.photos/seed/safehaven/192/192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://picsum.photos/seed/safehaven/512/512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

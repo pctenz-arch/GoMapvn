@@ -1,0 +1,185 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile data",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "displayName": { "type": "string" },
+        "photoURL": { "type": "string" },
+        "email": { "type": "string" }
+      },
+      "required": ["uid", "displayName", "email"]
+    },
+    "Post": {
+      "title": "Post",
+      "description": "Community post",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorPhoto": { "type": "string" },
+        "content": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorName", "content", "createdAt"]
+    },
+    "SafePlace": {
+      "title": "SafePlace",
+      "description": "A safe location on the map",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "addedBy": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "wheelchairAccessible": { "type": "boolean" },
+        "hasRamp": { "type": "boolean" },
+        "lgbtqFriendly": { "type": "boolean" },
+        "genderNeutralRestroom": { "type": "boolean" },
+        "quietZone": { "type": "boolean" },
+        "inclusivityRating": { "type": "number" }
+      },
+      "required": ["name", "category", "lat", "lng", "addedBy", "createdAt"]
+    },
+    "ChatMessage": {
+      "title": "ChatMessage",
+      "description": "A message in the AI chat",
+      "type": "object",
+      "properties": {
+        "role": { "type": "string", "enum": ["user", "model"] },
+        "text": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["role", "text", "createdAt"]
+    },
+    "Comment": {
+      "title": "Comment",
+      "description": "A comment on a post",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorPhoto": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorName", "text", "createdAt"]
+    },
+    "DangerZone": {
+      "title": "DangerZone",
+      "description": "A dangerous area to avoid",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "radius": { "type": "number" },
+        "severity": { "type": "string", "enum": ["low", "medium", "high"] }
+      },
+      "required": ["lat", "lng", "radius", "severity"]
+    },
+    "ChatSession": {
+      "title": "ChatSession",
+      "description": "A chat session with the AI",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "updatedAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "updatedAt"]
+    },
+    "ChatGroup": {
+      "title": "ChatGroup",
+      "description": "A community chat group",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "lat": { "type": "number" },
+        "lng": { "type": "number" },
+        "createdBy": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "members": { "type": "array", "items": { "type": "string" } },
+        "isPublic": { "type": "boolean" }
+      },
+      "required": ["name", "createdBy", "createdAt", "isPublic"]
+    },
+    "GroupMessage": {
+      "title": "GroupMessage",
+      "description": "A message in a chat group",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorPhoto": { "type": "string" },
+        "text": { "type": "string" },
+        "imageUrl": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorName", "createdAt"]
+    },
+    "PlaceComment": {
+      "title": "PlaceComment",
+      "description": "A comment on a safe place",
+      "type": "object",
+      "properties": {
+        "authorId": { "type": "string" },
+        "authorName": { "type": "string" },
+        "authorPhoto": { "type": "string" },
+        "text": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["authorId", "authorName", "text", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/User" },
+      "description": "User profiles"
+    },
+    "/users/{userId}/chats/{chatId}": {
+      "schema": { "$ref": "#/entities/ChatSession" },
+      "description": "User chat sessions"
+    },
+    "/users/{userId}/chats/{chatId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/ChatMessage" },
+      "description": "Messages within a chat session"
+    },
+    "/posts/{postId}": {
+      "schema": { "$ref": "#/entities/Post" },
+      "description": "Community posts"
+    },
+    "/posts/{postId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Comments on a post"
+    },
+    "/danger_zones/{zoneId}": {
+      "schema": { "$ref": "#/entities/DangerZone" },
+      "description": "Dangerous areas"
+    },
+    "/safe_places/{placeId}": {
+      "schema": { "$ref": "#/entities/SafePlace" },
+      "description": "Safe locations"
+    },
+    "/safe_places/{placeId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/Comment" },
+      "description": "Comments on a safe place"
+    },
+    "/chat_groups/{groupId}": {
+      "schema": { "$ref": "#/entities/ChatGroup" },
+      "description": "Community chat groups"
+    },
+    "/chat_groups/{groupId}/messages/{messageId}": {
+      "schema": { "$ref": "#/entities/GroupMessage" },
+      "description": "Messages within a community chat group"
+    }
+  }
+}

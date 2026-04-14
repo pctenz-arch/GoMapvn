@@ -1,0 +1,8 @@
+{
+  "name": "GoMap",
+  "description": "Ứng dụng bảo vệ an toàn cá nhân và cộng đồng với bản đồ địa điểm an toàn, cảnh báo SOS và chia sẻ thông tin.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}

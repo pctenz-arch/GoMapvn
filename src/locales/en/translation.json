@@ -1,0 +1,57 @@
+{
+  "nav": {
+    "home": "Home",
+    "map": "Map",
+    "sos": "SOS",
+    "chat": "AI Chat",
+    "profile": "Profile"
+  },
+  "home": {
+    "welcome": "Good morning",
+    "search_placeholder": "Search posts, guides...",
+    "quick_actions": "Quick Actions",
+    "fake_call": "Fake Call",
+    "record": "Record",
+    "share_location": "Share Location",
+    "community": "Community",
+    "post_placeholder": "What's on your mind?",
+    "post_button": "Post"
+  },
+  "profile": {
+    "title": "Profile",
+    "edit_profile": "Edit Profile",
+    "language": "Language",
+    "vietnamese": "Tiếng Việt",
+    "english": "English",
+    "logout": "Log Out",
+    "stats": {
+      "posts": "Posts",
+      "friends": "Friends",
+      "saved": "Saved"
+    }
+  },
+  "sos": {
+    "title": "Emergency",
+    "sos_button": "SOS",
+    "sos_desc": "Tap to send location and alert to trusted contacts",
+    "fake_call": "Fake Call",
+    "fake_call_desc": "Create a fake incoming call to escape awkward situations",
+    "emergency_contacts": "Emergency Contacts",
+    "police": "Police (113)",
+    "ambulance": "Ambulance (115)"
+  },
+  "chat": {
+    "title": "GoMap Assistant",
+    "active": "Active",
+    "placeholder": "Ask AI",
+    "welcome_msg": "Hello, I am the GoMap virtual assistant. I am here to listen, share, and advise you on psychological issues and personal safety. Are you facing any difficulties?",
+    "history": "Chat History",
+    "new_chat_button": "New Chat",
+    "new_chat_title": "New Chat Session"
+  },
+  "map": {
+    "search_placeholder": "Search safe places...",
+    "add_place": "Add Safe Place",
+    "my_location": "My Location"
+  }
+}
